@@ -12,8 +12,8 @@ with open("df.pkl","rb") as file:
 with open("pipeline.pkl","rb") as algo:
     pipline = pickle.load(algo)
 
-#df = pd.DataFrame(data)
-st.dataframe(df)
+df = pd.DataFrame(data)
+#st.dataframe(df)
 
 st.header("Select your Input")
 

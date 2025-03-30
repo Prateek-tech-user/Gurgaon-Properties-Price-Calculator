@@ -8,7 +8,7 @@ st.title("hello this is Gurgaon Properties")
 with open("df.pkl","rb") as file:
     data = pickle.load(file)
 
-with open("pipline.pkl","rb") as file:
+with open("pipeline.pkl","rb") as file:
     pipline = pickle.load(file)
 
 df = pd.DataFrame(data)

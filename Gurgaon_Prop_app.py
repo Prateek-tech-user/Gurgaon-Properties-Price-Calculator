@@ -12,7 +12,7 @@ with open("df.pkl","rb") as file:
 with open("pipeline.pkl","rb") as algo:
     pipline = pickle.load(algo)
 
-df = pd.DataFrame(data)
+#df = pd.DataFrame(data)
 st.dataframe(df)
 
 st.header("Select your Input")
@@ -36,8 +36,8 @@ if st.button("Predict"):
        'agePossession', 'built_up_area', 'servant room', 'store room',
        'furnishing_type', 'luxury_category', 'floor_category']
     one_df = pd.DataFrame(data,columns=columns)
-    st.dataframe(one_df)
+    #st.dataframe(one_df)
     price = np.expm1(pipline.predict(one_df)) 
-
+    st.text("Price")
 
 

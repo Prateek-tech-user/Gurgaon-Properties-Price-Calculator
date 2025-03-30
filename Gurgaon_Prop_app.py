@@ -17,7 +17,7 @@ df = pd.DataFrame(data)
 
 st.header("Select your Input")
 
-property_type = st.selectbox("Property type",["house","flate"])
+property_type = st.selectbox("Property type",["house","flat"])
 sector = st.selectbox("Select sector",df['sector'].unique().tolist())
 bedroom = st.selectbox("Number of Bedrooms",sorted(df['bedRoom'].unique().tolist()))
 bathroom = st.selectbox("Number of Bathrooms",sorted(df['bathroom'].unique().tolist()))

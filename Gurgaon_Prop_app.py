@@ -37,7 +37,8 @@ if st.button("Predict"):
        'furnishing_type', 'luxury_category', 'floor_category']
     one_df = pd.DataFrame(data,columns=columns)
     #st.dataframe(one_df)
-    price = np.expm1(pipline.predict(one_df)) 
-    st.markdown(f"**Estimated price is {np.round(price * 10000000):,.0f}**") 
+    price = np.expm1(pipeline.predict(one_df))[0]  # extract scalar
+    st.markdown(f"**Estimated price is ₹{np.round(price * 10000000):,.0f}**")
+ 
 
 

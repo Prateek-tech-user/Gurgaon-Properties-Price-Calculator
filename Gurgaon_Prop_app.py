@@ -38,6 +38,6 @@ if st.button("Predict"):
     one_df = pd.DataFrame(data,columns=columns)
     #st.dataframe(one_df)
     price = np.expm1(pipline.predict(one_df)) 
-    st.text(price)
+    st.text("Estimated price is ",price*10000000 )
 
 
